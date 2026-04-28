@@ -6,8 +6,6 @@
 
 <title>3D Viewer Page</title>
 
-<script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
-
 <style>
 body {
     margin: 0;
@@ -50,16 +48,17 @@ babylon {
 
 <div class="container">
 
-    <div class="viewer-box">
+    <!-- <div class="viewer-box">
         <iframe 
         title="Sketchfab Model"
         src="https://sketchfab.com/3d-models/fumofumo-b41df1817bec4311a0a1d3b5c3252f16/embed"
         allowfullscreen>
         </iframe>
-    </div>
+    </div> -->
 
     <div class="viewer-box">
-        <babylon model.url="fumoFixed.glb"></babylon>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@babylonjs/viewer/dist/babylon-viewer.esm.min.js"></script>
+        <babylon-viewer source="fumoFixed.glb"></babylon-viewer>
     </div>
 
 </div>
